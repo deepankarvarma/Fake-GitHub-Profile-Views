@@ -10,7 +10,7 @@ def reload_page(url, n):
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')
     options.add_argument('--no-sandbox')
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome()
 
     # Load the URL in the browser
     driver.get(url)
