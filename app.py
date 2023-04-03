@@ -1,12 +1,15 @@
 import streamlit as st
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 import time
 
 # Define a function to handle the page reloads
 def reload_page(url, n):
-    # Set up the webdriver in headless mode
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
+    # Set up the Chrome webdriver in headless mode
+    options = Options()
+    options.add_argument('--headless')
+    options.add_argument('--disable-gpu')
+    options.add_argument('--no-sandbox')
     driver = webdriver.Chrome(options=options)
 
     # Load the URL in the browser
@@ -23,15 +26,14 @@ def reload_page(url, n):
 
             # Print the title of the page
             st.write(f"Reload {i+1}: Page Title - {driver.title}")
-        except Exception as e:
-            st.write(f"An error occurred while reloading page {i+1}: {e}")
-            break
+        except:
+            st.write(f"An error occurred while reloading page {i+1}. Skipping...")
 
     # Close the browser
     driver.quit()
 
 # Set the title of the Streamlit app
-st.title("GitHub Profile Views")
+st.title("Page Reloader")
 
 # Add a text input for the URL
 url = st.text_input("Enter the URL to be reloaded")
@@ -46,5 +48,5 @@ if st.button("Reload"):
     else:
         try:
             reload_page(url, n)
-        except Exception as e:
-            st.error(f"An error occurred while processing the page reloads: {e}")
+        except:
+            st.error("An error occurred while processing the page reloads. Please try again.")
