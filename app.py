@@ -33,7 +33,7 @@ def reload_page(url, n):
 st.title("GitHub Profile Views")
 
 # Add a text input for the URL
-url = st.text_input("Enter the URL to be reloaded")
+# url = st.text_input("Enter the URL to be reloaded")
 
 # Add a number input for the number of reloads
 n = st.number_input("Enter the number of reloads", min_value=1, step=1)
