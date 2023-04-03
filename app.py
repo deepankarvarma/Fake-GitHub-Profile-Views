@@ -23,8 +23,9 @@ def reload_page(url, n):
 
             # Print the title of the page
             st.write(f"Reload {i+1}: Page Title - {driver.title}")
-        except:
-            st.write(f"An error occurred while reloading page {i+1}. Skipping...")
+        except Exception as e:
+            st.write(f"An error occurred while reloading page {i+1}: {e}")
+            break
 
     # Close the browser
     driver.quit()
@@ -45,5 +46,5 @@ if st.button("Reload"):
     else:
         try:
             reload_page(url, n)
-        except:
-            st.error("An error occurred while processing the page reloads. Please try again.")
+        except Exception as e:
+            st.error(f"An error occurred while processing the page reloads: {e}")
