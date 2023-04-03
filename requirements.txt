@@ -1,3 +1,5 @@
 selenium==4.8.3
 streamlit==1.20.0
 chromedriver-py==112.0.5615.28
+webdriver-manager==3.8.5
+
