@@ -1,14 +1,14 @@
 import streamlit as st
 from selenium import webdriver
+from webdriver_manager.firefox import GeckoDriverManager
 import time
 
 # Define a function to handle the page reloads
 def reload_page(url, n):
     # Set up the webdriver in headless mode
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-    chrome_driver_path = "chromedriver.exe"
-    driver = webdriver.Chrome(chrome_driver_path)
+    options = webdriver.FirefoxOptions()
+    options.headless = True
+    driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
 
     # Load the URL in the browser
     driver.get(url)
