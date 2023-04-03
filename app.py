@@ -7,7 +7,8 @@ def reload_page(url, n):
     # Set up the webdriver in headless mode
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
-    driver = webdriver.Chrome(options=options)
+    chrome_driver_path = "chromedriver.exe"
+    driver = webdriver.Chrome(chrome_driver_path)
 
     # Load the URL in the browser
     driver.get(url)
