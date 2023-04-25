@@ -12,7 +12,7 @@ The script uses the selenium and requests libraries to fetch the content of the 
 4. The script can be further customized to include additional features, such as a delay between each reload or the ability to specify a different browser or driver. It can also be adapted to simulate views on other websites besides GitHub.<br>
 <br>
 ### How to use
-1. Clone the repository to your local machine.
+1. Clone the repository to your local machine.<br>
 2. Install the required libraries by running `pip install -r requirements.txt` in your terminal.<br>
 3. Run the script by executing `streamlit run app.py` in your terminal.<br>
 4. Enter the URL of the GitHub profile you want to simulate views for in the text input field.<br>
