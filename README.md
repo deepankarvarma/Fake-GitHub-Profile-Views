@@ -8,7 +8,7 @@ The script uses the selenium and requests libraries to fetch the content of the 
 2. The `reload_page()` function uses the selenium library to launch a headless Firefox browser and load the page content obtained from get_page_content(). The `time.sleep()` method is used to give the page enough time to fully load before the next reload. The driver.title property is used to obtain the title of the page, which includes the name of the GitHub user whose profile is being simulated.<br>
 
 3. The Streamlit app allows users to enter the URL of the GitHub profile they want to simulate views for and the number of views they want to simulate. The input fields are created using the `text_input()` and `number_input()` methods respectively. The app also includes a check to ensure that a valid URL is entered before the simulation begins.
-<br><br>
+<br>
 4. The script can be further customized to include additional features, such as a delay between each reload or the ability to specify a different browser or driver. It can also be adapted to simulate views on other websites besides GitHub.<br>
 
 ### How to use <br>
@@ -18,6 +18,5 @@ The script uses the selenium and requests libraries to fetch the content of the 
 4. Enter the URL of the GitHub profile you want to simulate views for in the text input field.<br>
 5. Enter the number of views you want to simulate in the number input field.<br>
 5. Click the "Reload" button to start simulating the views.<br>
-<br>
 
 ### Please note that this script is for educational purposes only and should not be used to manipulate or deceive others.
